@@ -35,7 +35,7 @@ func (enemy *Enemy) Draw(screen *tl.Screen) {
 	}
 	velocity := game.velocity
 	if game.boost {
-		velocity *= 4
+		velocity = 60
 	}
 	if !game.lose {
 		enemy.position += velocity * screen.TimeDelta()
