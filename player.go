@@ -23,9 +23,9 @@ func (player *Player) Update(screen *tl.Screen) {
 	var newlist []*Enemy
 	var distance float64
 	if game.boost {
-		distance = screen.TimeDelta() * 2
+		distance = 40 * screen.TimeDelta()
 	} else {
-		distance = screen.TimeDelta()
+		distance = game.velocity * screen.TimeDelta()
 	}
 	game.distance += distance
 	for _,e := range player.enemies {

@@ -104,7 +104,7 @@ func ShowScore(x, y int, frame *Frame) {
 	digits, limit := 4, 9999
 	padding := 2
 
-	score := int(game.distance)
+	score := int(game.distance/10.0)
 	if score > limit {score = limit}
 	textscore := strconv.Itoa(score)
 
